@@ -146,8 +146,8 @@ async def sign(ctx):
             users[user_id].add_coin(coin_reward) ## 資料數設定原分數加簽到分數
             users[user_id].last_sign = today ## 最後簽到時間(last_sign)設定簽到時間
 
-            await ctx.send(f'{ctx.author.mention} 簽到成功！獲得 {coin_reward*1.35} 小考分數！\n `你受到中科之神眷顧 分數*1.35 (原分數：{coin_reward})`')
-            print(f'{ctx.author.mention} 簽到成功！獲得 {coin_reward*1.35} 小考分數！\n `你受到中科之神眷顧 分數*1.35 (原分數：{coin_reward})`')
+            await ctx.send(f'{ctx.author.mention} 簽到成功！獲得 {coin_reward} 小考分數！\n `你受到中科之神眷顧 分數*1.35`')
+            print(f'{ctx.author.mention} 簽到成功！獲得 {coin_reward} 小考分數！\n `你受到中科之神眷顧 分數*1.35`')
     
     # 第一個簽到 if else (specific_role_id_1 先)
     elif specific_role_id_2 in [role.id for role in ctx.author.roles]: ##判斷有沒有 specific_role_id_2
